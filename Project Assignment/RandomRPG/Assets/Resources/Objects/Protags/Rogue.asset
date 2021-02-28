@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620e553078da1aa409d62f71bd9764fb, type: 3}
+  m_Name: Rogue
+  m_EditorClassIdentifier: 
+  charName: Rogue
+  maxHP: 300
+  largeSpite: {fileID: 21300000, guid: 69bba1f2d5ff3ea41a3c4bd7f33ca9d6, type: 3}
+  smallSprite: {fileID: 21300000, guid: 8ee910aa633cb1548a9e6d6f44f82440, type: 3}
+  playType: 0
+  charEnvironment: 0
+  attacks:
+  - attackName: Stab
+    attackTarget: 0
+    attackBlurb: stabs the opponent!
+    attackDoesHeal: 0
+    attackDamage: 60
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
+  - attackName: Power Strike
+    attackTarget: 0
+    attackBlurb: strikes the opponent with incredible force!
+    attackDoesHeal: 0
+    attackDamage: 120
+    doesRecoil: 1
+    recoilDamage: 30
+    recoilBlurb: takes recoil damage!
+  - attackName: Relax
+    attackTarget: 2
+    attackBlurb: relaxes!
+    attackDoesHeal: 1
+    attackDamage: 60
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 

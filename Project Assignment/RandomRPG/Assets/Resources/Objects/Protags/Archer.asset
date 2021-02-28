@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620e553078da1aa409d62f71bd9764fb, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: 
+  charName: Archer
+  maxHP: 250
+  largeSpite: {fileID: 21300000, guid: fb9d4ee73be895d46bef8143efe9ad66, type: 3}
+  smallSprite: {fileID: 21300000, guid: 850320c1a9a97f3479607aefce63f8f1, type: 3}
+  playType: 0
+  charEnvironment: 0
+  attacks:
+  - attackName: Arrow Shot
+    attackTarget: 0
+    attackBlurb: shoots an arrow!
+    attackDoesHeal: 0
+    attackDamage: 50
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
+  - attackName: Multi-Arrow
+    attackTarget: 1
+    attackBlurb: fires multiple arrows!
+    attackDoesHeal: 0
+    attackDamage: 30
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
+  - attackName: Heal Arrow
+    attackTarget: 3
+    attackBlurb: fires a healing arrow!
+    attackDoesHeal: 1
+    attackDamage: 50
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 

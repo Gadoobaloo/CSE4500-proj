@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620e553078da1aa409d62f71bd9764fb, type: 3}
+  m_Name: Martial Artist
+  m_EditorClassIdentifier: 
+  charName: Martial Artist
+  maxHP: 300
+  largeSpite: {fileID: 21300000, guid: 3b42d01f5fb191146be8b228ce4848bb, type: 3}
+  smallSprite: {fileID: 21300000, guid: 862fcf3fd4083664e9267bf8a585ae54, type: 3}
+  playType: 0
+  charEnvironment: 0
+  attacks:
+  - attackName: Raging Fist
+    attackTarget: 0
+    attackBlurb: attacks with a raging fist!
+    attackDoesHeal: 0
+    attackDamage: 70
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
+  - attackName: Leg Sweep
+    attackTarget: 1
+    attackBlurb: sweeps his leg
+    attackDoesHeal: 0
+    attackDamage: 30
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
+  - attackName: Meditate
+    attackTarget: 2
+    attackBlurb: meditates!
+    attackDoesHeal: 1
+    attackDamage: 70
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
