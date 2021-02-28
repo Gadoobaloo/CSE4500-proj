@@ -7,17 +7,20 @@ public enum AttackTarget { SingleOpponent, AllOpponents, Self, SingleAlly, AllAl
 
 public class GameInfo : MonoBehaviour
 {
-    static List<int> levelHistory = new List<int>();
-    static List<Unit> protagHistory = new List<Unit>();
+    static private List<int> levelHistory = new List<int>();
+    static private List<Unit> protagHistory = new List<Unit>();
 
-    static GameInfo instance;
+    //static private GameInfo instance;
 
+    /*
     static string charChoice1;
     static string charChoice2;
     static string charChoice3;
+    */
 
     private void Start()
     {
+        /*
         if(instance != null)
         {
             Destroy(this.gameObject);
@@ -26,9 +29,10 @@ public class GameInfo : MonoBehaviour
 
         instance = this;
         GameObject.DontDestroyOnLoad(this.gameObject);
+        */
     }
 
-    static public bool checkIfLevelRepeat(int level)
+    static public bool CheckIfLevelRepeat(int level)
     {
         bool levelWasRepeated = false;
 
@@ -42,32 +46,36 @@ public class GameInfo : MonoBehaviour
         return levelWasRepeated;
     }
 
-    static public bool checkIfProtagRepeat(Unit protag)
+    static public bool CheckIfProtagRepeat(Unit protag)
     {
         bool protagWasRepeated = false;
 
-        foreach (Unit pastProtag in protagHistory)
+        if(protagHistory != null)
         {
-            if (pastProtag == protag)
+            foreach (Unit pastProtag in protagHistory)
             {
-                protagWasRepeated = true;
+                if (pastProtag == protag)
+                {
+                    protagWasRepeated = true;
+                }
             }
         }
+
         return protagWasRepeated;
     }
 
 
-    static public void storeLevel(int level)
+    static public void StoreLevel(int level)
     {
         levelHistory.Add(level);
     }
 
-    static public void storeProtag(Unit protag)
+    static public void StoreProtag(Unit protag)
     {
         protagHistory.Add(protag);
     }
 
-    static public Unit getProtagHistory(int index)
+    static public Unit GetProtagHistory(int index)
     {
         return protagHistory[index];
     }

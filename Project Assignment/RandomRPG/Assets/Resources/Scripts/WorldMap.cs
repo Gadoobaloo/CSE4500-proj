@@ -51,11 +51,11 @@ public class WorldMap : MonoBehaviour
 
         do
         {
-            suggestion = Random.Range(1, Enviroments.getNumOfEnvironments());
-            needNewSuggest = GameInfo.checkIfLevelRepeat(suggestion);
+            suggestion = Random.Range(1, Enviroments.GetNumOfEnvironments());
+            needNewSuggest = GameInfo.CheckIfLevelRepeat(suggestion);
         } while (needNewSuggest);
 
-        GameInfo.storeLevel(suggestion);
+        GameInfo.StoreLevel(suggestion);
         choice = Enviroments.IntToEnvironment(suggestion);
 
         return choice;

@@ -1,31 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class UnitButton : MonoBehaviour
 {
     private Unit unitData;
-    public int id;
+    public Image childImage;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (SceneManager.GetActiveScene().name == "CharacterAssign")
-        {
-            unitData = GameInfo.getProtagHistory(id);
-
-        }else
-        {
-            //SpawnSet(BattleBG.BattleEnvironment);
-        }
+        childImage.sprite = unitData.largeSpite;
+        Debug.Log(unitData.name);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+
+    public void SetUnitData(Unit tempUnit) 
+    {
+        unitData = tempUnit;
     }
 
 }

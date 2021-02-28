@@ -2,12 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
- How to add a new environment:
-1) add the environment name to the Environment enum
-2) update num of elements
-3) in unity, make the list of sprites be the same order as they appear in the enum(i hope it works lol)
- */
 public enum Environment { None, Beach, Castle, City, Desert, Forest, Snow, Space, Underwater, Volcano }
 
 public class Enviroments : MonoBehaviour
@@ -39,7 +33,7 @@ public class Enviroments : MonoBehaviour
         Debug.Log("backgrounds list size = " + Backgrounds.Capacity);
     }
 
-    static public int getNumOfEnvironments()
+    static public int GetNumOfEnvironments()
     {
         return numOfEnvironments;
     }
