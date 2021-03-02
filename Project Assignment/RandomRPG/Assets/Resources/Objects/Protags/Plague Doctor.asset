@@ -12,34 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e553078da1aa409d62f71bd9764fb, type: 3}
   m_Name: Plague Doctor
   m_EditorClassIdentifier: 
-  charName: Plague Doctor
+  charName: Plague Doc
   maxHP: 300
   largeSpite: {fileID: 21300000, guid: ae32acbacd083fd4f8a2b66d126c2dcb, type: 3}
   smallSprite: {fileID: 21300000, guid: 7f43690de789be042b25fdab5eca00a1, type: 3}
   playType: 0
   charEnvironment: 0
+  minSpawnRate: 0
+  maxSpawnRate: 0
   attacks:
   - attackName: Potion Toss
-    attackTarget: 1
+    attackTarget: 0
     attackBlurb: tosses a potion!
     attackDoesHeal: 0
     attackDamage: 60
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Heal Potion
-    attackTarget: 4
-    attackBlurb: tosses a healing potion!
-    attackDoesHeal: 1
-    attackDamage: 60
+  - attackName: Tackle
+    attackTarget: 0
+    attackBlurb: tackles!
+    attackDoesHeal: 0
+    attackDamage: 50
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Stange Potion
-    attackTarget: 2
-    attackBlurb: drinks a stange potion!
+  - attackName: Big Potion
+    attackTarget: 0
+    attackBlurb: tosses a big potion!
     attackDoesHeal: 0
-    attackDamage: 100
-    doesRecoil: 1
-    recoilDamage: -500
+    attackDamage: 80
+    doesRecoil: 0
+    recoilDamage: 0
     recoilBlurb: is feeling strange!

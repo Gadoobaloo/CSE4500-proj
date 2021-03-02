@@ -18,6 +18,8 @@ MonoBehaviour:
   smallSprite: {fileID: 21300000, guid: 85859f6388904c34595bf68f2c6cd201, type: 3}
   playType: 0
   charEnvironment: 0
+  minSpawnRate: 0
+  maxSpawnRate: 0
   attacks:
   - attackName: Sword Slash
     attackTarget: 0
@@ -27,19 +29,19 @@ MonoBehaviour:
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Sword Spin
-    attackTarget: 1
-    attackBlurb: spins with his sword!
+  - attackName: Sheild Bash
+    attackTarget: 0
+    attackBlurb: uses sheild bash!
     attackDoesHeal: 0
-    attackDamage: 30
+    attackDamage: 60
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Breather
-    attackTarget: 2
-    attackBlurb: takes a breather!
-    attackDoesHeal: 1
-    attackDamage: 50
+  - attackName: Strong Slash
+    attackTarget: 0
+    attackBlurb: swings his sword with force!
+    attackDoesHeal: 0
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 

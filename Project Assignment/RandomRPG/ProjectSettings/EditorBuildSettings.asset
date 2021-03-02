@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Resources/Scenes/Battle.unity
     guid: 10ea56518a2051e42ae97bac01ab844d
+  - enabled: 1
+    path: Assets/Resources/Scenes/DebugMode.unity
+    guid: 2897ee7cc5cbd8446b2f18419a294260
   m_configObjects: {}

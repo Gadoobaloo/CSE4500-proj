@@ -8,29 +8,8 @@ public enum AttackTarget { SingleOpponent, AllOpponents, Self, SingleAlly, AllAl
 public class GameInfo : MonoBehaviour
 {
     static private List<int> levelHistory = new List<int>();
-    static private List<Unit> protagHistory = new List<Unit>();
-
-    //static private GameInfo instance;
-
-    /*
-    static string charChoice1;
-    static string charChoice2;
-    static string charChoice3;
-    */
-
-    private void Start()
-    {
-        /*
-        if(instance != null)
-        {
-            Destroy(this.gameObject);
-            return;
-        }
-
-        instance = this;
-        GameObject.DontDestroyOnLoad(this.gameObject);
-        */
-    }
+    static private List<Unit> protagSuggestHistory = new List<Unit>();
+    static private List<Unit> protagChoices = new List<Unit>();
 
     static public bool CheckIfLevelRepeat(int level)
     {
@@ -50,9 +29,9 @@ public class GameInfo : MonoBehaviour
     {
         bool protagWasRepeated = false;
 
-        if(protagHistory != null)
+        if(protagSuggestHistory != null)
         {
-            foreach (Unit pastProtag in protagHistory)
+            foreach (Unit pastProtag in protagSuggestHistory)
             {
                 if (pastProtag == protag)
                 {
@@ -64,22 +43,41 @@ public class GameInfo : MonoBehaviour
         return protagWasRepeated;
     }
 
-
     static public void StoreLevel(int level)
     {
         levelHistory.Add(level);
+        levelHistory.TrimExcess();
     }
 
     static public void StoreProtag(Unit protag)
     {
-        protagHistory.Add(protag);
+        protagSuggestHistory.Add(protag);
+        protagSuggestHistory.TrimExcess();
+    }
+
+    static public void StoreProtagChoice(Unit protagChoice)
+    {
+        if(protagChoices.Count < 3)
+        {
+            protagChoices.Add(protagChoice);
+            protagChoices.TrimExcess();
+        }
     }
 
     static public Unit GetProtagHistory(int index)
     {
-        return protagHistory[index];
+        return protagSuggestHistory[index];
     }
 
+    static public Unit GetProtagChoice(int index)
+    {
+        return protagChoices[index];
+    }
+
+    static public int GetProtagChoiceSize()
+    {
+        return protagChoices.Count;
+    }
 
 
 }

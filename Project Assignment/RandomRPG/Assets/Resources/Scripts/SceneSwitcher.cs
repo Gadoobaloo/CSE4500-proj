@@ -21,4 +21,15 @@ public class SceneSwitcher : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+
+    static public void ToWolrdMap()
+    {
+        SceneManager.LoadScene(3);
+    }
+
+
+    static public void ToGameEnd()
+    {
+        SceneManager.LoadScene(5);
+    }
 }

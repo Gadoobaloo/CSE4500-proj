@@ -30,7 +30,6 @@ public class Enviroments : MonoBehaviour
 
         Backgrounds.TrimExcess();
         numOfEnvironments = Backgrounds.Capacity;
-        Debug.Log("backgrounds list size = " + Backgrounds.Capacity);
     }
 
     static public int GetNumOfEnvironments()
@@ -43,31 +42,31 @@ public class Enviroments : MonoBehaviour
         switch (enviro)
         {
             case Environment.Beach:
-                Debug.Log("Beach");
+                //Debug.Log("Beach");
                 return Backgrounds[1];
             case Environment.Castle:
-                Debug.Log("Castle");
+                //Debug.Log("Castle");
                 return Backgrounds[2];
             case Environment.City:
-                Debug.Log("City");
+                //Debug.Log("City");
                 return Backgrounds[3];
             case Environment.Desert:
-                Debug.Log("Desert");
+                //Debug.Log("Desert");
                 return Backgrounds[4];
             case Environment.Forest:
-                Debug.Log("Forest");
+                //Debug.Log("Forest");
                 return Backgrounds[5];
             case Environment.Snow:
-                Debug.Log("Snow");
+                //Debug.Log("Snow");
                 return Backgrounds[6];
             case Environment.Space:
-                Debug.Log("Space");
+                //Debug.Log("Space");
                 return Backgrounds[7];
             case Environment.Underwater:
-                Debug.Log("Underwater");
+                //Debug.Log("Underwater");
                 return Backgrounds[8];
             case Environment.Volcano:
-                Debug.Log("Volcano");
+                //Debug.Log("Volcano");
                 return Backgrounds[9];
             default:
                 return Backgrounds[0];

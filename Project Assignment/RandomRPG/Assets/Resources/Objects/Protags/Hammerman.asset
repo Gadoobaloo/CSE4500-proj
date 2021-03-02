@@ -18,6 +18,8 @@ MonoBehaviour:
   smallSprite: {fileID: 21300000, guid: 8168f23d7dbf0614985df77821b28d71, type: 3}
   playType: 0
   charEnvironment: 0
+  minSpawnRate: 0
+  maxSpawnRate: 0
   attacks:
   - attackName: Hammer Swing
     attackTarget: 0
@@ -27,11 +29,11 @@ MonoBehaviour:
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Hammer Spin
-    attackTarget: 1
-    attackBlurb: spins with his hammer!
+  - attackName: Tackle
+    attackTarget: 0
+    attackBlurb: tackles the opponent!
     attackDoesHeal: 0
-    attackDamage: 30
+    attackDamage: 50
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -40,6 +42,6 @@ MonoBehaviour:
     attackBlurb: swings his hammer with devastating force!
     attackDoesHeal: 0
     attackDamage: 120
-    doesRecoil: 1
-    recoilDamage: 30
+    doesRecoil: 0
+    recoilDamage: 0
     recoilBlurb: 

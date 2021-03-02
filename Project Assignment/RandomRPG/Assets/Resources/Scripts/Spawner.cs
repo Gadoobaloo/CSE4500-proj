@@ -11,6 +11,10 @@ public class Spawner : MonoBehaviour
     readonly List<Unit> Protags = new List<Unit>();
     readonly List<Unit> Enemies = new List<Unit>();
 
+    static public int numOfEnemies;
+
+    int sceneCoutdown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +35,28 @@ public class Spawner : MonoBehaviour
         }
     }
 
+
+    private void Update()
+    {
+        if (this.transform.childCount < 3 && SceneManager.GetActiveScene().name == "CharacterAssign")
+        {
+            DetermineProtagChoice();
+            SpawnUnit();
+            sceneCoutdown--;
+            if(sceneCoutdown <= 0)
+            {
+                SceneSwitcher.ToWolrdMap();
+            }
+        }
+    }
+
     //just by passing in the environment type this should spawn the nessesary entities
     void SpawnSet(Environment enviro)
     {
         if (enviro == Environment.None)
         {
             int numOfProtagToSpawn = 3;
+            sceneCoutdown = 3;
 
             while (numOfProtagToSpawn > 0)
             {
@@ -44,6 +64,9 @@ public class Spawner : MonoBehaviour
                 SpawnUnit();
                 numOfProtagToSpawn--;
             }
+        } else
+        {
+            DetermineEnemyChoice(enviro);
         }
     }
 
@@ -60,6 +83,28 @@ public class Spawner : MonoBehaviour
         GameInfo.StoreProtag(currentSpawnChoice);
     }
 
+    void DetermineEnemyChoice(Environment enviro)
+    {
+        foreach(Unit enemy in Enemies)
+        {
+            if(enemy.charEnvironment == enviro)
+            {
+                int min = enemy.minSpawnRate;
+                int max = enemy.maxSpawnRate;
+
+                int numToSpawn = Random.Range(min, max + 1);
+
+                while(numToSpawn > 0)
+                {
+                    currentSpawnChoice = enemy;
+                    SpawnUnit();
+                    numOfEnemies++;
+                    numToSpawn--;
+                }
+            }
+        }
+    }
+
     private void SpawnUnit()
     {
         GameObject toSpawn;
@@ -67,8 +112,6 @@ public class Spawner : MonoBehaviour
         toSpawn = Instantiate(unitButton, this.transform) as GameObject;
 
         toSpawn.GetComponent<UnitButton>().SetUnitData(currentSpawnChoice);
-
-        //Debug.Log(toSpawn.name);
     }
 
     static public Unit GetSpawnChoice()

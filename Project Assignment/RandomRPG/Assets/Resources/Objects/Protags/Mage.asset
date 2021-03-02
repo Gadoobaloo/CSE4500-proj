@@ -18,6 +18,8 @@ MonoBehaviour:
   smallSprite: {fileID: 21300000, guid: df987f7eb3a3d234f89dd1e84fb0a1f4, type: 3}
   playType: 0
   charEnvironment: 0
+  minSpawnRate: 0
+  maxSpawnRate: 0
   attacks:
   - attackName: Fire Spell
     attackTarget: 0
@@ -28,16 +30,16 @@ MonoBehaviour:
     recoilDamage: 0
     recoilBlurb: 
   - attackName: Explosive Spell
-    attackTarget: 1
+    attackTarget: 0
     attackBlurb: casts an explosive spell!
     attackDoesHeal: 0
     attackDamage: 70
     doesRecoil: 1
     recoilDamage: 30
     recoilBlurb: took damage from the explosion!
-  - attackName: Heal Spell
+  - attackName: Ice Spell
     attackTarget: 0
-    attackBlurb: casts a healing spell!
+    attackBlurb: casts an ice spell!
     attackDoesHeal: 0
     attackDamage: 60
     doesRecoil: 0

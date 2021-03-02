@@ -23,7 +23,6 @@ public class WorldMapBG : MonoBehaviour
         Sprite toTurnTo = Enviroments.EnvironmentToSprite(enviro);
 
         rend.sprite = toTurnTo;
-        Debug.Log("I'm Here");
     }
 
 }

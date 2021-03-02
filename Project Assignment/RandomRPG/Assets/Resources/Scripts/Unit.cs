@@ -25,6 +25,8 @@ public class Unit : ScriptableObject
     public Sprite smallSprite;
     public PlayType playType;
     public Environment charEnvironment;
+    public int minSpawnRate;
+    public int maxSpawnRate;
 
     public List<Attack> attacks = new List<Attack>();
 }

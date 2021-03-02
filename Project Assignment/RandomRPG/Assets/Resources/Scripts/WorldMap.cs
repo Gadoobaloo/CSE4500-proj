@@ -29,6 +29,9 @@ public class WorldMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
+
         leftBGScript = leftBG.GetComponent<WorldMapBG>();
         middleBGScript = middleBG.GetComponent<WorldMapBG>();
         rightBGScript = rightBG.GetComponent<WorldMapBG>();
@@ -45,6 +48,7 @@ public class WorldMap : MonoBehaviour
     //determine what 3 levels will be displayed on the world map
     Environment DetermineLevel()
     {
+
         Environment choice = Environment.None;
         int suggestion = 0;
         bool needNewSuggest = true;
@@ -66,17 +70,14 @@ public class WorldMap : MonoBehaviour
         switch (id)
         {
             case "left":
-                Debug.Log("left one was clicked");
                 BattleBG.BattleEnvironment = leftLevel;
                 SceneManager.LoadScene(4);
                 break;
             case "middle":
-                Debug.Log("middle one was clicked");
                 BattleBG.BattleEnvironment = middleLevel;
                 SceneManager.LoadScene(4);
                 break;
             case "right":
-                Debug.Log("right one was clicked");
                 BattleBG.BattleEnvironment = rightLevel;
                 SceneManager.LoadScene(4);
                 break;
