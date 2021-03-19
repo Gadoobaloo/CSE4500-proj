@@ -25,7 +25,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: shoots an arrow!
     attackDoesHeal: 0
-    attackDamage: 50
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -33,15 +33,15 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: fires a swift arrow!
     attackDoesHeal: 0
-    attackDamage: 50
+    attackDamage: 60
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Tackle
+  - attackName: Flame Arrow
     attackTarget: 0
-    attackBlurb: tackles the opponent!
-    attackDoesHeal: 1
-    attackDamage: 50
+    attackBlurb: fires a firey arrow!
+    attackDoesHeal: 0
+    attackDamage: 100
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 

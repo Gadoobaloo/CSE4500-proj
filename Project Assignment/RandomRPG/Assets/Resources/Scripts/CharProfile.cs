@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
 
 public class CharProfile : MonoBehaviour
 {
@@ -17,10 +13,10 @@ public class CharProfile : MonoBehaviour
     public Text attack2Text;
     public Text attack3Text;
 
-    int currentHealth;
+    private int currentHealth;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         charProfileImage.GetComponent<Button>().interactable = false;
 
@@ -29,23 +25,26 @@ public class CharProfile : MonoBehaviour
             case "Char1":
                 id = 0;
                 break;
+
             case "Char2":
                 id = 1;
                 break;
+
             case "Char3":
                 id = 2;
                 break;
+
             default:
                 Debug.Log("CharProfile.cs cant find a good name");
                 break;
         }
 
-        
-        if(GameObject.Find("BattleSystem") != null)
+        if (GameObject.Find("BattleSystem") != null)
         {
-            charData = GameInfo.GetProtagChoice(id);
+            //charData = GameInfo.GetProtagChoice(id);
+            charData = GameInfo.protagChoices[id];
         }
-        
+
         if (charData != null)
         {
             currentHealth = charData.maxHP;
@@ -57,13 +56,6 @@ public class CharProfile : MonoBehaviour
             attack2Text.text = charData.attacks[1].attackName;
             attack3Text.text = charData.attacks[2].attackName;
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void MoveUp()
@@ -78,7 +70,6 @@ public class CharProfile : MonoBehaviour
 
     public Unit GetCharData()
     {
-        return charData;
+        return GameInfo.protagChoices[id];
     }
-
 }

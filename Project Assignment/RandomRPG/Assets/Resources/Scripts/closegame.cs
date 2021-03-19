@@ -1,20 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class closegame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     private void Update()
     {
-        if (Input.GetKeyDown("space")) { 
-                Application.Quit();
+        if (Input.GetKeyDown("space"))
+        {
+            Application.Quit();
         }
     }
-
 }

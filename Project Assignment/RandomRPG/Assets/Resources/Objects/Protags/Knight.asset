@@ -25,7 +25,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: swings his sword!
     attackDoesHeal: 0
-    attackDamage: 60
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -41,7 +41,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: swings his sword with force!
     attackDoesHeal: 0
-    attackDamage: 80
+    attackDamage: 100
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 

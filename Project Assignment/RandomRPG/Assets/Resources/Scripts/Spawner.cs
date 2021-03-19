@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,15 +7,15 @@ public class Spawner : MonoBehaviour
     private GameObject unitButton;
     static private Unit currentSpawnChoice;
 
-    readonly List<Unit> Protags = new List<Unit>();
-    readonly List<Unit> Enemies = new List<Unit>();
+    private List<Unit> Protags = new List<Unit>();
+    private List<Unit> Enemies = new List<Unit>();
 
     static public int numOfEnemies;
 
-    int sceneCoutdown;
+    private int sceneCoutdown;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         unitButton = Resources.Load<GameObject>("Prefabs/UnitButton");
         Protags.AddRange(Resources.LoadAll<Unit>("Objects/Protags"));
@@ -35,7 +34,6 @@ public class Spawner : MonoBehaviour
         }
     }
 
-
     private void Update()
     {
         if (this.transform.childCount < 3 && SceneManager.GetActiveScene().name == "CharacterAssign")
@@ -43,7 +41,7 @@ public class Spawner : MonoBehaviour
             DetermineProtagChoice();
             SpawnUnit();
             sceneCoutdown--;
-            if(sceneCoutdown <= 0)
+            if (sceneCoutdown <= 0)
             {
                 SceneSwitcher.ToWolrdMap();
             }
@@ -51,7 +49,7 @@ public class Spawner : MonoBehaviour
     }
 
     //just by passing in the environment type this should spawn the nessesary entities
-    void SpawnSet(Environment enviro)
+    private void SpawnSet(Environment enviro)
     {
         if (enviro == Environment.None)
         {
@@ -64,13 +62,14 @@ public class Spawner : MonoBehaviour
                 SpawnUnit();
                 numOfProtagToSpawn--;
             }
-        } else
+        }
+        else
         {
             DetermineEnemyChoice(enviro);
         }
     }
 
-    void DetermineProtagChoice()
+    private void DetermineProtagChoice()
     {
         bool needNewUnit;
 
@@ -83,18 +82,18 @@ public class Spawner : MonoBehaviour
         GameInfo.StoreProtag(currentSpawnChoice);
     }
 
-    void DetermineEnemyChoice(Environment enviro)
+    private void DetermineEnemyChoice(Environment enviro)
     {
-        foreach(Unit enemy in Enemies)
+        foreach (Unit enemy in Enemies)
         {
-            if(enemy.charEnvironment == enviro)
+            if (enemy.charEnvironment == enviro)
             {
                 int min = enemy.minSpawnRate;
                 int max = enemy.maxSpawnRate;
 
                 int numToSpawn = Random.Range(min, max + 1);
 
-                while(numToSpawn > 0)
+                while (numToSpawn > 0)
                 {
                     currentSpawnChoice = enemy;
                     SpawnUnit();

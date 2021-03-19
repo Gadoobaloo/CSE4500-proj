@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Piranha
   m_EditorClassIdentifier: 
   charName: Piranha
-  maxHP: 100
+  maxHP: 80
   largeSpite: {fileID: 21300000, guid: 66e340998b97bb24d827b1c90cda857c, type: 3}
   smallSprite: {fileID: 21300000, guid: aa34e10123fa49e4885ccc85c9329e83, type: 3}
   playType: 1

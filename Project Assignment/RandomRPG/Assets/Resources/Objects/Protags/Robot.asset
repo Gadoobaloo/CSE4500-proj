@@ -25,7 +25,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: fires a laser beam!
     attackDoesHeal: 0
-    attackDamage: 60
+    attackDamage: 100
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -33,15 +33,15 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: overheats!
     attackDoesHeal: 0
-    attackDamage: 80
+    attackDamage: 60
     doesRecoil: 0
     recoilDamage: 30
     recoilBlurb: takes recoil damage!
   - attackName: Robo-Punch
     attackTarget: 0
     attackBlurb: uses Robo-Punch!
-    attackDoesHeal: 1
-    attackDamage: 60
+    attackDoesHeal: 0
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 

@@ -25,21 +25,21 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: swings his med pack!
     attackDoesHeal: 0
-    attackDamage: 50
-    doesRecoil: 0
-    recoilDamage: 0
-    recoilBlurb: 
-  - attackName: Tackle
-    attackTarget: 0
-    attackBlurb: tackles the enemy!
-    attackDoesHeal: 0
-    attackDamage: 50
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
   - attackName: Drop Kick
     attackTarget: 0
-    attackBlurb: dropkicks the opponent!
+    attackBlurb: drop kicks the enemy!
+    attackDoesHeal: 0
+    attackDamage: 100
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 
+  - attackName: Headbutt
+    attackTarget: 0
+    attackBlurb: headbutts the opponent!
     attackDoesHeal: 0
     attackDamage: 60
     doesRecoil: 0

@@ -25,7 +25,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: attacks with a raging fist!
     attackDoesHeal: 0
-    attackDamage: 70
+    attackDamage: 100
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -33,15 +33,15 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: sweeps his leg
     attackDoesHeal: 0
-    attackDamage: 50
+    attackDamage: 60
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
-  - attackName: Tackle
+  - attackName: Uppercut
     attackTarget: 0
-    attackBlurb: tackles!
+    attackBlurb: performs an uppercut!
     attackDoesHeal: 0
-    attackDamage: 60
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 

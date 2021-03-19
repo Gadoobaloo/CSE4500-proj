@@ -1,12 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ClickManager : MonoBehaviour
 {
     public GameObject myWorldMap;
-    WorldMap myWorldMapScript;
-    
+    private WorldMap myWorldMapScript;
+
     // should only be "left", "middle", or "right"
     public string id;
 

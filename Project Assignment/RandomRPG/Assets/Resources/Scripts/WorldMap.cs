@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /*
@@ -13,25 +11,22 @@ using UnityEngine.SceneManagement;
 
 public class WorldMap : MonoBehaviour
 {
-    Environment leftLevel;
-    Environment middleLevel;
-    Environment rightLevel;
+    private Environment leftLevel;
+    private Environment middleLevel;
+    private Environment rightLevel;
 
     public GameObject leftBG;
-    WorldMapBG leftBGScript;
+    private WorldMapBG leftBGScript;
 
     public GameObject middleBG;
-    WorldMapBG middleBGScript;
+    private WorldMapBG middleBGScript;
 
     public GameObject rightBG;
-    WorldMapBG rightBGScript;
+    private WorldMapBG rightBGScript;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
-
-
         leftBGScript = leftBG.GetComponent<WorldMapBG>();
         middleBGScript = middleBG.GetComponent<WorldMapBG>();
         rightBGScript = rightBG.GetComponent<WorldMapBG>();
@@ -46,9 +41,8 @@ public class WorldMap : MonoBehaviour
     }
 
     //determine what 3 levels will be displayed on the world map
-    Environment DetermineLevel()
+    private Environment DetermineLevel()
     {
-
         Environment choice = Environment.None;
         int suggestion = 0;
         bool needNewSuggest = true;
@@ -73,18 +67,20 @@ public class WorldMap : MonoBehaviour
                 BattleBG.BattleEnvironment = leftLevel;
                 SceneManager.LoadScene(4);
                 break;
+
             case "middle":
                 BattleBG.BattleEnvironment = middleLevel;
                 SceneManager.LoadScene(4);
                 break;
+
             case "right":
                 BattleBG.BattleEnvironment = rightLevel;
                 SceneManager.LoadScene(4);
                 break;
+
             default:
                 Debug.Log("invalid id");
                 break;
         }
     }
-
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,8 +14,8 @@ public class AttackButton : MonoBehaviour
     private void Start()
     {
         GetComponent<Button>().interactable = false;
-        
-        if(GameObject.Find("BattleSystem") != null)
+
+        if (GameObject.Find("BattleSystem") != null)
         {
             battleSystemGO = GameObject.Find("BattleSystem");
             battleSystemScript = battleSystemGO.GetComponent<BattleSystem>();
@@ -39,8 +37,6 @@ public class AttackButton : MonoBehaviour
 
     public void AttackClick()
     {
-        Debug.Log("attack was pressed!");
         StartCoroutine(battleSystemScript.SetupAttack(this.name, parent.name));
     }
-
 }

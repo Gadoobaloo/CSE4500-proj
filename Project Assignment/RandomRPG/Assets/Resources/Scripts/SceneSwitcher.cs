@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /*
@@ -10,6 +8,7 @@ using UnityEngine.SceneManagement;
 2 - CharacterAssign
 3 - WorldMap
 4 - Battle
+5 - End Screen
  */
 
 public class SceneSwitcher : MonoBehaviour
@@ -21,12 +20,10 @@ public class SceneSwitcher : MonoBehaviour
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-
     static public void ToWolrdMap()
     {
         SceneManager.LoadScene(3);
     }
-
 
     static public void ToGameEnd()
     {

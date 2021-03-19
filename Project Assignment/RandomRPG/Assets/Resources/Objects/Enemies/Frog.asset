@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Frog
   m_EditorClassIdentifier: 
   charName: Frog
-  maxHP: 100
+  maxHP: 80
   largeSpite: {fileID: 21300000, guid: 187a69c131a9adf48a7e8b630330c554, type: 3}
   smallSprite: {fileID: 21300000, guid: aa34e10123fa49e4885ccc85c9329e83, type: 3}
   playType: 1

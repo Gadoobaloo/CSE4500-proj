@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class WorldMapBG : MonoBehaviour
 {
     private SpriteRenderer rend;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rend = this.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
     }
 
     public void ChangeSprite(Environment enviro)
@@ -24,5 +21,4 @@ public class WorldMapBG : MonoBehaviour
 
         rend.sprite = toTurnTo;
     }
-
 }

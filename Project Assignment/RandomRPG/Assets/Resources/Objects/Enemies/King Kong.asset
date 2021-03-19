@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: King Kong
   m_EditorClassIdentifier: 
   charName: King Kong
-  maxHP: 300
+  maxHP: 200
   largeSpite: {fileID: 21300000, guid: 2d3e6efea7ecebe4b843f40f6aaa814e, type: 3}
   smallSprite: {fileID: 21300000, guid: aa34e10123fa49e4885ccc85c9329e83, type: 3}
   playType: 1

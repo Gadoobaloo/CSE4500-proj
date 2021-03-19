@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,9 +12,16 @@ public class UnitButton : MonoBehaviour
 
     private int currentHP;
 
+    public AudioClip charSelectSound;
+
+    private AudioSource audioSource;
+
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         if (GameObject.Find("BattleSystem") != null)
         {
             currentHP = unitData.maxHP;
@@ -33,19 +38,22 @@ public class UnitButton : MonoBehaviour
         childImage.sprite = unitData.largeSpite;
     }
 
-    public void SetUnitData(Unit tempUnit) 
+    public void SetUnitData(Unit tempUnit)
     {
         unitData = tempUnit;
     }
 
     public void ClickedAction()
     {
-        if (unitData.playType == PlayType.Playable) 
+        if (unitData.playType == PlayType.Playable)
         {
-            GameInfo.StoreProtagChoice(unitData);
+            //GameInfo.StoreProtagChoice(unitData);
+            audioSource.PlayOneShot(charSelectSound, 1f);
+            GameInfo.protagChoices.Add(unitData);
             GetComponent<Button>().interactable = false;
             Destroy(this.gameObject, 1.0f);
-        } else if (unitData.playType == PlayType.NPC)
+        }
+        else if (unitData.playType == PlayType.NPC)
         {
             Debug.Log("enemy was clicked");
             StartCoroutine(battleSystemScript.AttackSingleOpponent(this.gameObject));
@@ -87,6 +95,4 @@ public class UnitButton : MonoBehaviour
         Spawner.numOfEnemies--;
         Destroy(this.gameObject);
     }
-
-
 }

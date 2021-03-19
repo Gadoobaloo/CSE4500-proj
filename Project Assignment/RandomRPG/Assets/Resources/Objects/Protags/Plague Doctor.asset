@@ -25,15 +25,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: tosses a potion!
     attackDoesHeal: 0
-    attackDamage: 60
-    doesRecoil: 0
-    recoilDamage: 0
-    recoilBlurb: 
-  - attackName: Tackle
-    attackTarget: 0
-    attackBlurb: tackles!
-    attackDoesHeal: 0
-    attackDamage: 50
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -41,7 +33,15 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: tosses a big potion!
     attackDoesHeal: 0
-    attackDamage: 80
+    attackDamage: 100
     doesRecoil: 0
     recoilDamage: 0
-    recoilBlurb: is feeling strange!
+    recoilBlurb: 
+  - attackName: Peck
+    attackTarget: 0
+    attackBlurb: pecks with their mask!
+    attackDoesHeal: 0
+    attackDamage: 60
+    doesRecoil: 0
+    recoilDamage: 0
+    recoilBlurb: 

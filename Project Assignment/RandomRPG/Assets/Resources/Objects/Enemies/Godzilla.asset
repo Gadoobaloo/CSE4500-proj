@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Godzilla
   m_EditorClassIdentifier: 
   charName: Godzilla
-  maxHP: 300
+  maxHP: 200
   largeSpite: {fileID: 21300000, guid: dc90ef9f279da09479daea7115a1bd7b, type: 3}
   smallSprite: {fileID: 21300000, guid: aa34e10123fa49e4885ccc85c9329e83, type: 3}
   playType: 1

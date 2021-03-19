@@ -25,7 +25,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: casts a fire spell!
     attackDoesHeal: 0
-    attackDamage: 60
+    attackDamage: 80
     doesRecoil: 0
     recoilDamage: 0
     recoilBlurb: 
@@ -33,7 +33,7 @@ MonoBehaviour:
     attackTarget: 0
     attackBlurb: casts an explosive spell!
     attackDoesHeal: 0
-    attackDamage: 70
+    attackDamage: 100
     doesRecoil: 1
     recoilDamage: 30
     recoilBlurb: took damage from the explosion!

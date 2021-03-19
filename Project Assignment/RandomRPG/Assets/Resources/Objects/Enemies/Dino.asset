@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dino
   m_EditorClassIdentifier: 
   charName: Velociraptor
-  maxHP: 100
+  maxHP: 150
   largeSpite: {fileID: 21300000, guid: d89fefd158867f447ae566d1007a0106, type: 3}
   smallSprite: {fileID: 21300000, guid: aa34e10123fa49e4885ccc85c9329e83, type: 3}
   playType: 1

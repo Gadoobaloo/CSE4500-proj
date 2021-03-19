@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public enum PlayType { Playable, NPC }
+
 public enum AttackTarget { SingleOpponent, AllOpponents, Self, SingleAlly, AllAllies }
 
 public class GameInfo : MonoBehaviour
 {
     static private List<int> levelHistory = new List<int>();
-    static private List<Unit> protagSuggestHistory = new List<Unit>();
-    static private List<Unit> protagChoices = new List<Unit>();
+    static public List<Unit> protagSuggestHistory = new List<Unit>();
+    static public List<Unit> protagChoices = new List<Unit>();
 
     static public bool CheckIfLevelRepeat(int level)
     {
@@ -17,7 +17,7 @@ public class GameInfo : MonoBehaviour
 
         foreach (int pastLevel in levelHistory)
         {
-            if(pastLevel == level)
+            if (pastLevel == level)
             {
                 levelWasRepeated = true;
             }
@@ -29,7 +29,7 @@ public class GameInfo : MonoBehaviour
     {
         bool protagWasRepeated = false;
 
-        if(protagSuggestHistory != null)
+        if (protagSuggestHistory != null)
         {
             foreach (Unit pastProtag in protagSuggestHistory)
             {
@@ -57,7 +57,7 @@ public class GameInfo : MonoBehaviour
 
     static public void StoreProtagChoice(Unit protagChoice)
     {
-        if(protagChoices.Count < 3)
+        if (protagChoices.Count < 3)
         {
             protagChoices.Add(protagChoice);
             protagChoices.TrimExcess();
@@ -78,6 +78,4 @@ public class GameInfo : MonoBehaviour
     {
         return protagChoices.Count;
     }
-
-
 }

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Unit", fileName = "Unit")]
@@ -30,5 +29,3 @@ public class Unit : ScriptableObject
 
     public List<Attack> attacks = new List<Attack>();
 }
-
-
